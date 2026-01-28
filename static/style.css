@@ -12,6 +12,10 @@
   --ff: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
+.faviconn{
+  border-radius: 50px;
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
