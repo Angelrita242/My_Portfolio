@@ -4,7 +4,7 @@ import smtplib
 from email.message import EmailMessage
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///messages.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///instance/messages.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
