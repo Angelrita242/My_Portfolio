@@ -1,0 +1,179 @@
+/* Dark-modern portfolio theme — styles.css */
+:root{
+  --bg:#07101a;
+  --panel:#0b1220;
+  --muted:#93a3b1;
+  --text:#eaf4f8;
+  --accent:#6be3b3;
+  --accent2:#7cc7ff;
+  --radius:12px;
+  --container:1100px;
+  --gap:1.25rem;
+  --ff: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--ff);
+  background:linear-gradient(180deg, #04121a 0%, #071526 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:2rem;
+}
+
+/* Header */
+.site-header{
+  position:sticky; 
+  top:0; 
+  z-index:1000;
+  backdrop-filter: blur(6px);
+  /* background: rgba(3,6,10,0.55); */
+  border-bottom:1px solid rgba(255,255,255,0.02);
+}
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{
+  font-weight:700; font-size:1.125rem; color:var(--text); text-decoration:none;
+}
+.nav{
+  display:flex; gap:1rem; align-items:center;
+}
+.nav a{
+  color:var(--muted); text-decoration:none; font-weight:600; padding:.35rem .6rem; border-radius:8px;
+}
+.nav a:hover{color:var(--text); background:rgba(255,255,255,0.02)}
+#nav-toggle{display:none; background:none; border:0; cursor:pointer}
+.hamburger{width:22px; height:2px; background:var(--text); display:block; position:relative}
+.hamburger::after,.hamburger::before{content:""; position:absolute; left:0; right:0; height:2px; background:var(--text)}
+.hamburger::before{top:-6px} .hamburger::after{bottom:-6px}
+
+/* Hero */
+.hero{display:grid; grid-template-columns:1fr 340px; gap:2rem; align-items:center; padding-top:3rem; padding-bottom:3rem}
+.hero-content h1{font-size:2.1rem; margin:0 0 .5rem}
+.accent{color:var(--accent)}
+.lead{color:var(--muted); margin:0 0 1rem}
+.hero-ctas{display:flex; gap:0.75rem; margin-top:1rem}
+.btn{display:inline-block; padding:.6rem .9rem; border-radius:10px; text-decoration:none; font-weight:700; font-size:.95rem; border:1px solid transparent}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2)); color:#052826}
+.btn.outline{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,0.04)}
+
+.photo-placeholder{width:100%; height:260px; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); color:var(--muted); font-weight:600}
+
+/* Sections */
+.section{padding:2.25rem 0}
+.section h2{margin:0 0 .5rem}
+.muted{color:var(--muted)}
+.about-grid{display:grid; grid-template-columns:1fr 320px; gap:1.5rem; align-items:start}
+.facts{list-style:none; padding:0; margin:0; color:var(--muted)}
+
+.skills-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-top:1rem}
+.skill{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01)); padding:1rem; border-radius:10px}
+
+/* Projects */
+.projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1rem; margin-top:1rem}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:1rem}
+.card h3{margin:0 0 .5rem}
+.card-meta{display:flex; justify-content:space-between; align-items:center; gap:.5rem; margin-top:.75rem}
+.link{color:var(--accent); text-decoration:none}
+
+/* Timeline */
+.timeline{display:grid; gap:1rem}
+.timeline-item{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01)); padding:1rem; border-radius:10px}
+.date{color:var(--muted); font-size:.9rem}
+
+/* Contact */
+.contact-grid{display:grid; grid-template-columns:1fr 320px; gap:1rem}
+.contact-form label{display:block; margin-bottom:.75rem; color:var(--muted)}
+.contact-form input, .contact-form textarea{width:100%; padding:.6rem .75rem; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--text); font-size:0.95rem}
+.form-actions{display:flex; gap:.5rem; margin-top:.5rem}
+
+.contact-info .social a{display:inline-block; margin-right:.5rem; color:var(--muted); text-decoration:none}
+.contact-info .social a:hover{color:var(--accent)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.02); margin-top:2rem; padding:1rem 0}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; gap:1rem}
+.footer-nav a{color:var(--muted); text-decoration:none}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr; text-align:center}
+  .about-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  #nav-toggle{display:block}
+  .nav{position:fixed; top:64px; right:0; background:rgba(3,6,10,0.98); height:calc(100vh - 64px); width:240px; transform:translateX(110%); transition:transform .25s; flex-direction:column; padding:1rem; gap:1rem}
+  .nav.open{transform:translateX(0)}
+  .hero-image{order:2}
+}
+
+/* .hero-image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+/* .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}  */ 
+
+.hero-image img {
+  width: 280px;        /* adjust: 200–320px is sweet spot */
+  max-width: 100%;
+  height: auto;        /* keeps aspect ratio */
+  border-radius: 30%;  /* optional: makes it circular */
+  object-fit: cover;
+}
+/* body {
+    margin: 0;
+    background: #0d0d0d;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.about, .projects, .contact {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background: #3f72ff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+} */

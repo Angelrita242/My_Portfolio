@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Angelrita Ayo — Portfolio</title>
+  <meta name="description" content="Portfolio — Angelrita Ayo | Computer Science & AI student. Web apps, Python automation, machine learning experiments." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="favicon.icon">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">Angelrita Ayo</a>
+
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero container">
+      <div class="hero-content">
+        <h1>Hey there! — I'm <span class="accent">Angelrita Ayo</span></h1>
+        <p class="lead">Computer Science &amp; AI student. I build web projects, automate tasks with Python, and experiment with machine learning.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#projects">See projects</a>
+          <!-- <a class="btn outline" href="resume.pdf" download>Download resume</a> -->
+        </div>
+
+        <ul class="quick-stats">
+          <li><strong>Top:</strong> AI Modeling, Python, JavaScript, SQL</li>
+          <li><strong>Looking for:</strong> Remote jobs</li>
+        </ul>
+      </div>
+
+      <div class="hero-image" role="img" aria-label="Portrait placeholder">
+        <div class="photo-placeholder"><img src="/static/me.jpg" alt="Angelrita Ayo"></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>I'm a Computer Science &amp; AI student passionate about building practical software and learning by doing. I enjoy front-end UI work, writing Python scripts for automation, and training simple ML models for classification tasks.</p>
+          <p>I focus on clean, maintainable code and quick iterations. Currently seeking remote jobs and paid projects to grow my career portfolio.</p>
+          <p>Alongside, I am also a data analyst, I work with tools like Excel, PowerBI and Tableu to get insights in information.</p>
+        </div>
+
+        <ul class="facts">
+          <li><strong>Education:</strong> BSc — Computer Science &amp; AI (current)</li>
+          <li><strong>Interests:</strong> Data analysis, Web development, Machine learning</li>
+          <li><strong>Availability:</strong> Remote jobs/ Internships</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <p class="muted">Click links to view code in repositories and Notebook.</p>
+
+      <div class="projects-grid">
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>Blackjack (Browser)</h3>
+            <p>Playable Blackjack game built with JS; game logic, simple AI dealer, responsive layout.</p>
+            <div class="card-meta">
+              <span>HTML • CSS • JS</span>
+              <a class="link" href="https://github.com/Angelrita242/Blackjack"  rel="noopener">Repo</a>
+              <!-- target="_blank" -->
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>Chess (Local Multiplayer)</h3>
+            <p>Chess UI with move validation and drag/drop; focused on UX and game rules implementation.</p>
+            <div class="card-meta">
+              <span>JavaScript</span>
+              <a class="link" href="https://github.com/Angelrita242/Chess" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>Digit Classifier (CNN)</h3>
+            <p>CNN in Keras for digit recognition; training, evaluation, and sample UI for predictions.</p>
+            <div class="card-meta">
+              <span>Python • Keras</span>
+              <a class="link" href=  "https://colab.research.google.com/drive/1H2MePi9ATla0Cdo7zKhOpeLM071kYVf1"  target="_blank" rel="noopener">Notebook</a>
+            </div>
+            <!-- "https://colab.research.google.com/drive/1gAV8YWkL0ngKwIXLocD_BrBCDs-TM_hO" -->
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <div class="card-body">
+            <h3>Decision Maker (Music prediction)</h3>
+            <p>A simple AI Model that predicts what kind of music a person would love based on the age and gender.</p>
+            <div class="card-meta">
+              <span>Python • Sklearn</span>
+              <a class="link" href="https://github.com/Angelrita242/Decision_Maker" target="_blank" rel="noopener">Repo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <h3>Web</h3>
+          <p>HTML, CSS, JavaScript, responsive design</p>
+        </div>
+        <div class="skill">
+          <h3>Backend</h3>
+          <p>Python, Flask, REST APIs</p>
+        </div>
+        <div class="skill">
+          <h3>Machine Learning</h3>
+          <p>Data preprocessing, Keras, Sklearn, model evaluation,Big data, Data analysis</p>
+        </div>
+        <div class="skill">
+          <h3>Tools</h3>
+          <p>Git, VS Code, pyCharm, Excel, Tableu, PowerBI, SQL Database</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>AI Model Tester / Data Annotation Analyst (Remote)</h4>
+          <span class="date">2024 — 2025</span>
+          <p>AI Training & Data Annotation Platform</p>
+            <ul><li>Evaluated AI outputs for accuracy, relevance, and bias</li></ul></li>
+            <ul><li>Annotated data and flagged inconsistencies</li></ul>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Frontend Developer (Intern / Junior Role)</h4>
+          <span class="date">2022 — 2023</span>
+          <p>Local Tech Startup, Lagos, Nigeria</p>
+            <ul><li>Developed responsive interfaces using HTML, CSS, JavaScript</li></ul></li>
+            <ul><li>Assisted with testing and debugging</li></ul>
+        </div>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Bursar & Accountant</h4>
+          <span class="date">2020 — 2023</span>
+          <p>Private Primary School, Lagos, Nigeria </p>
+            <ul><li>Analyzed data, managed records and prepared reports using Excel</li></ul></li>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section container">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>BSc in Computer Science &amp; Artificial Intelligence</h4>
+          <span class="date">2024 — present</span>
+          <ul><li>Core areas: Machine Learning, Data Analysis, Databases, Algorithms, Python Programming</li></ul></li></p>
+          <ul><li>Delivered academic explanations on Bias, Variance, and Regularisation</li></ul></li>
+          <ul><li>Completed coursework involving ML model training, Handling Big Data, evaluation, and reporting</li></ul></li>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact  -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p class="muted">Open to remote jobs and projects — let’s talk.</p>
+
+      <div class="contact-grid">
+        <form  action="/send" method="POST" id="contact-form" class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" id="name" required placeholder="Your name">
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" id="email" required placeholder="you@example.com">
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" id="message" rows="5" required placeholder="Tell me about the project"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send message</button>
+            <button type="reset" class="btn outline">Reset</button>
+          </div>
+
+          <p id="form-status" class="muted" aria-live="polite"></p>
+        </form>
+
+        <aside class="contact-info">
+          <h3>Get in touch</h3>
+          <p><strong>Email:</strong> <a id="email-link">justangelrita@gmail.com</a></p>
+          <p><strong>Location:</strong>   Nigeria / Remote</p>
+
+          <div class="social">
+            <a class="social-link" href="https://github.com/Angelrita242" target="_blank" rel="noopener">GitHub</a>
+            <a class="social-link" href="https://www.linkedin.com/in/angelrita-ayo-akalugwu-87a58b336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+   <!-- <section class="contact">
+        <h2>Contact Me</h2>
+
+        <form action="/send" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section> -->
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Angelrita Ayo — Built with ❤️</small>
+      <nav class="footer-nav">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelrita Ayo | Portfolio</title>
+    <link rel="stylesheet" href="\static\style.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1>Angelrita Ayo</h1>
+        <p>Computer Science & AI Student</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I'm a passionate Computer Science and Artificial Intelligence student 
+            focused on building intelligent systems, clean web applications, and 
+            solving real-world problems through technology.
+        </p>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Chess Game – HTML, CSS, JavaScript</li>
+            <li>Blackjack App – JavaScript</li>
+            <li>Python Automation Scripts</li>
+            <li>Machine Learning Mini-Projects</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+
+        <form action="/send" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html> -->
