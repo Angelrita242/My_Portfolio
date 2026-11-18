@@ -77,16 +77,17 @@ def send_email(name, sender_email, message_text):
     email_message["To"] = receiver
     email_message["Reply-To"] = sender_email
     email_message.set_content(
-        f"Name: {name}\nEmail: {sender_email}\n\nMessage:\n{message_text}"
+        f"Name: {name}\nEmail: {sender_email}\nMessage: {message_text}"
     )
 
     try:
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=15) as server:
+        with smtplib.SMTP("smtp.gmail.com", 587) as server:
             server.starttls()
             server.login(username, password)
             server.send_message(email_message)
     except (OSError, smtplib.SMTPException):
         app.logger.exception("Unable to send portfolio email notification.")
+
 
 
 if __name__ == "__main__":
