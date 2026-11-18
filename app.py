@@ -46,9 +46,9 @@ def success():
 
 # EMAIL SENDER
 def send_email(name, email, message):
-    sender = "justangelrita@gmail.com"
-    password = "likzhxhorzxclyyr"
-    receiver = "justangelrita@gmail.com"
+    sender = "-"
+    password = "-"
+    receiver = "-"
 
     msg = EmailMessage()
     msg['Subject'] = f"New message from {name}"
